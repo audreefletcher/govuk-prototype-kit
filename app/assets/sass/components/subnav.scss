@@ -1,0 +1,29 @@
+.app-navigation {
+font-size: 19px;
+font-size: 1.1875rem;
+line-height: 1.31579;
+}
+
+.app-navigation {
+  box-sizing: border-box;
+width: 100%;
+background-color: #f8f8f8;
+}
+
+.app-navigation__list-item {
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+display: block;
+position: relative;
+height: 50px;
+padding: 0 15px;
+float: left;
+line-height: 50px;
+}
+
+.app-navigation__list {
+position: relative;
+left: -15px;
+padding: 0;
+list-style: none;
+}

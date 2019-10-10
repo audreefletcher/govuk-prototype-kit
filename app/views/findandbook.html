@@ -1,0 +1,48 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+{% block beforeContent %}
+{{ govukPhaseBanner({
+tag: {
+  text: "alpha"
+},
+classes: "no-border",
+html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+</div>
+<div class="app-navigation govuk-clearfix">
+  <ul class="app-navigation__list govuk-width-container">
+    <li class="app-navigation__list-item">
+      <a class="govuk-link govuk-link--no-visited-state app-navigation__link govuk-!-font-weight-bold" href="/get-started/" data-topnav="Get started">Research library</a>
+      <li class="app-navigation__list-item">
+        <a class="govuk-link govuk-link--no-visited-state app-navigation__link govuk-!-font-weight-bold" href="/get-started/" data-topnav="Get started">User needs</a>
+            </ul>
+          </div>
+          <div class="govuk-width-container">
+{% endblock %}
+{% block content %}
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third">
+        <h3 class="govuk-heading-m">Search projects</h3>
+
+
+      </div>
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">User research library</h1>
+
+        <a href="#" class="govuk-heading-s">Children and young people
+         </a>
+        <p class="govuk-body">Research to understand and meet the needs of children and young people</p>
+
+      </div>
+
+    </div>
+
+
+
+
+{% endblock %}

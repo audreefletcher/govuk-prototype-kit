@@ -4,45 +4,134 @@
 {% block pageTitle %}
   GOV.UK Prototype Kit
 {% endblock %}
-
+{% block beforeContent %}
+{{ govukPhaseBanner({
+tag: {
+  text: "alpha"
+},
+classes: "no-border",
+html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+</div>
+<div class="app-navigation govuk-clearfix">
+  <ul class="app-navigation__list govuk-width-container">
+    <li class="app-navigation__list-item">
+      <a class="govuk-link govuk-link--no-visited-state app-navigation__link govuk-!-font-weight-bold" href="/get-started/" data-topnav="Get started">Research library</a>
+      <li class="app-navigation__list-item">
+        <a class="govuk-link govuk-link--no-visited-state app-navigation__link govuk-!-font-weight-bold" href="/get-started/" data-topnav="Get started">User needs</a>
+            </ul>
+          </div>
+          <div class="govuk-width-container">
+{% endblock %}
 {% block content %}
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-half govuk-!-padding-bottom-6">
-      <a href="#" class="govuk-heading-s">Design
-       </a>
-    <p class="width-limit">Guidance, resources and tools for designing great user experiences for DfE services.</p>
-  </div>
-  <div class="govuk-grid-column-one-half govuk-!-padding-bottom-6">
-      <a href="#" class="govuk-heading-s">Delivery
-       </a>
-    <p class="width-limit">Everything about delivery of services in DfE, including guidance for service owners, service patterns and a list of DfE services.</p>
-  </div>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">User research library</h1>
+      </div>
+    </div>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third">
+        <h3 class="govuk-heading-m">Search projects</h3>
+        <div class="govuk-form-group">
+  <label class="govuk-label" for="event-name">
+    Keywords
+  </label>
+  <input class="govuk-input" id="event-name" name="event-name" type="text">
+</div>
+        <div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Phase
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="prediscovery">prediscovery</option>
+    <option value="discovery" selected>discovery</option>
+    <option value="alpha">alpha</option>
+    <option value="beta">beta</option>
+  </select>
+</div>
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+  File type
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="doc">Document</option>
+    <option value="slides" selected>Slides</option>
+    <option value="table">Table</option>
+    <option value="video">Video</option>
+  </select>
+</div>
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Date added
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="date-added">November 2019</option>
+    <option value="date-added">December 2019</option>
+  </select>
 </div>
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-half govuk-!-padding-bottom-6">
-      <a href="#" class="govuk-heading-s">User Research
-       </a>
-    <p class="width-limit">Learn how we do user research, the tools we use, and find out what research already exists before you begin.</p>
-  </div>
-  <div class="govuk-grid-column-one-half govuk-!-padding-bottom-6">
-      <a href="#" class="govuk-heading-s">Engineering and Architecture
-       </a>
-    <p class="width-limit">Digital technology guidance, as well as information on our technology stack and architecture.</p>
-  </div>
-</div>
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-half govuk-!-padding-bottom-6">
-      <a href="#" class="govuk-heading-s">Security and Information Assurance
-       </a>
-    <p class="width-limit">Security and information assurance policy, process and guidance for digital services - all in one place.</p>
-  </div>
-  <div class="govuk-grid-column-one-half govuk-!-padding-bottom-6">
-      <a href="#" class="govuk-heading-s">Commercial
-       </a>
-    <p class="width-limit">The commercial and procurement support, guidance and templates service owners need.</p>
-  </div>
-</div>
-</div>
+      </div>
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-l">Collections</h2>
+        <a href="#" class="govuk-heading-s">Children and young people
+         </a>
+        <p class="govuk-body">Research to understand and meet the needs of children and young people</p>
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+        <a href="#" class="govuk-heading-s">Social workers
+         </a>
+        <p class="govuk-body">Research around the needs and experience of social workers</p>
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+        <a href="#" class="govuk-heading-s">Parents
+         </a>
+        <p class="govuk-body">Research to understand and meet the needs of parents.</p>
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+        <a href="#" class="govuk-heading-s">School leaders
+         </a>
+        <p class="govuk-body">Our knowledge so far about school leaders and their needs.</p>
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+        <a href="#" class="govuk-heading-s">Early career teachers
+         </a>
+        <p class="govuk-body">Research relating to early career teachers</p>
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+        <a href="#" class="govuk-heading-s">Teachers
+         </a>
+        <p class="govuk-body">Teacher-focused research and insight</p>
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+        <a href="#" class="govuk-heading-s">Teaching assistances
+         </a>
+        <p class="govuk-body">Research relating to classroom teaching assistants</p>
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+
+        <div id="js-pagination">
+                  <nav class="gem-c-pagination" role="navigation" aria-label="Pagination">
+          <ul class="gem-c-pagination__list" data-module="track-click">
+              <li class="gem-c-pagination__item gem-c-pagination__item--next">
+                <a href="/search/guidance-and-regulation?page=2&amp;topic=e48ab80a-de80-4e83-bf59-26316856a5f9" class="gem-c-pagination__link" rel="next" data-track-category="contentsClicked" data-track-action="next" data-track-label="/search/guidance-and-regulation?page=2&amp;topic=e48ab80a-de80-4e83-bf59-26316856a5f9" data-track-dimension="next" data-track-dimension-index="29">
+                  <span class="gem-c-pagination__link-title">
+                    <svg class="gem-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                      <path fill="currentColor" d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                    </svg>
+                    <span class="gem-c-pagination__link-text govuk-!-font-weight-bold">
+                      Next page
+                    </span>
+                  </span>
+                    <span class="gem-c-pagination__link-divider visually-hidden">:</span>
+                    <span class="gem-c-pagination__link-label">2 of 292</span>
+                </a>
+              </li>
+          </ul>
+        </nav>
+
+                </div>
+      </div>
+
+    </div>
+
+
+
+
 {% endblock %}
