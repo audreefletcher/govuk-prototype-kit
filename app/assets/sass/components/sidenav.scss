@@ -1,0 +1,60 @@
+.app-subnav__section {
+margin: 0 0 20px;
+padding: 0;
+list-style-type: none;
+}
+
+.app-subnav {
+padding: 30px 15px 0 0;
+font-weight: 400;
+}
+.app-subnav {
+font-size: 1rem;
+line-height: 1.25;
+}
+
+.app-subnav__link {
+padding: 2px 0;
+text-decoration: none;
+}
+.govuk-link:link, .app-prose-scope a:link {
+color: #1d70b8;
+}
+.govuk-link:visited, .app-prose-scope a:visited {
+color: #4c2c92;
+}
+.govuk-link--no-visited-state:link {
+color: #1d70b8;
+}
+.govuk-link--no-visited-state:visited {
+color: #1d70b8;
+}
+.app-subnav__section-item {
+margin-bottom: 5px;
+padding-top: 5px;
+padding-bottom: 5px;
+}
+
+.app-subnav__section-item--current {
+margin-left: -14px;
+padding-left: 10px;
+border-left: 4px solid #1d70b8;
+background-color: #f8f8f8;
+}
+.app-subnav__section-item--current .app-subnav__link {
+font-weight: 700;
+}
+
+.app-subnav__link {
+font-weight: 400;
+text-decoration: none;
+}
+
+.app-subnav__list-item--current .app-subnav__link:hover {
+text-decoration: none;
+}
+
+.app-subnav__link:not(:focus):hover {
+color: #1d70b8;
+text-decoration: underline;
+}

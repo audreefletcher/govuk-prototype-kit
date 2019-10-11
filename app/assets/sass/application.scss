@@ -17,13 +17,22 @@ $govuk-assets-path: '/govuk/assets/';
 @import "components/masthead";
 @import "components/markdown";
 
+@import "components/searchpagination";
+@import "components/subnav";
+@import "components/sidenav";
+
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 .width-limit{
   max-width: 400px;
 }
+
 .govuk-header__logo {
     margin-bottom: 5px;
 }
 .govuk-header__content {
   padding-top:5px
+}
+.no-border{
+  border:0px;
+
 }

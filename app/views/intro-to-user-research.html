@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block beforeContent %}
+{{ govukPhaseBanner({
+tag: {
+  text: "alpha"
+},
+classes: "no-border",
+html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+</div>
+<div class="app-navigation govuk-clearfix">
+  <ul class="app-navigation__list govuk-width-container">
+    <li class="app-navigation__list-item app-navigation__list-item--current">
+      <a class="govuk-link govuk-link--no-visited-state app-navigation__link govuk-!-font-weight-bold" href="/get-started/" data-topnav="Get started">Research library</a>
+    <li class="app-navigation__list-item">
+      <a class="govuk-link govuk-link--no-visited-state app-navigation__link govuk-!-font-weight-bold" href="/get-started/" data-topnav="Get started">User needs</a>
+  </ul>
+</div>
+<div class="govuk-width-container">
+  {% endblock %}
+  {% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <ul class="app-subnav__section">
+        <li class="app-subnav__section-item app-subnav__section-item--current"><a class="app-subnav__link govuk-link govuk-link--no-visited-state" href="/styles/colour/">GOV.UK Service Toolkit</a></li>
+        <li class="app-subnav__section-item"><a class="app-subnav__link govuk-link govuk-link--no-visited-state" href="/styles/colour/">DfE guidance and tools</a></li>
+        <li class="app-subnav__section-item"><a class="app-subnav__link govuk-link govuk-link--no-visited-state" href="/styles/colour/">Assessments in DfE</a></li>
+        <li class="app-subnav__section-item"><a class="app-subnav__link govuk-link govuk-link--no-visited-state" href="/styles/colour/">Find and book in-house services</a></li>
+        <li class="app-subnav__section-item"><a class="app-subnav__link govuk-link govuk-link--no-visited-state" href="/styles/colour/">Find and book training</a></li>
+      </ul>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Introduction to user research</h1>
+      <p class="govuk-body">User research is a thriving discipline at the Department for Education. User researchers work across the department, gaining insight into our users to improve services for the public and civil servants.</p>
+
+      <h3 class="govuk-heading-m">When you join us</h3>
+      <p class="govuk-body">When you start as a user researcher at the DfE you must:</p>
+
+    </div>
+   </div> {% endblock %}
