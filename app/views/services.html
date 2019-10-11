@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="#" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <h3 class="govuk-heading-m">Filter</h3>
+  </div>
+  <div class="govuk-grid-column-two-thirds">
+
+    {% for file in data %}
+
+    {% set url = file.path.replace('.md','').split('/') %}
+    <a class="govuk-heading-m govuk-!-margin-bottom-2" href="/services/{{ url[url.length - 1 ] }}">
+      {{ file.data.title }}
+    </a>
+    <p>{{ file.data.description }}</p>
+    <hr class="govuk-section-break govuk-!-margin-top-6 govuk-!-margin-bottom-4 govuk-section-break--visible">
+
+    {% endfor %}
+
+  </div>
+</div>
+
+{% endblock %}

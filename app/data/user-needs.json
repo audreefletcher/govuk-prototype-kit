@@ -1,0 +1,30 @@
+{
+  "needs":[
+
+      {
+        "id": "1",
+        "story": "As an academy leader, I want information so that we can stay compliant with our funding agreement, and understand our funding allocations and payments.",
+        "service": "Get funding for my school",
+        "researchLocation": "https://google.com",
+        "servicePattern": "Request or claim something",
+        "epic": true
+      },
+      {
+        "id": "2",
+        "story": "As a potential apprentice, I want guidance so that I can apply for an apprenticeship.",
+        "service": "Apprenticeships",
+        "researchLocation": "https://google.com",
+        "servicePattern": "Become something",
+        "epic": true
+      },
+      {
+        "id": "3",
+        "story": "As a learning provider I want to update my information in one place so that it can be shared across agencies.",
+        "service": "Register of Learning providers",
+        "researchLocation": "https://google.com",
+        "servicePattern": "Prove, share or check information",
+        "epic": true
+      }
+
+    ]
+}

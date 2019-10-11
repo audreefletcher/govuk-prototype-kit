@@ -1,0 +1,26 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a href="/services" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third">
+        <h3 class="govuk-heading-m">In this collection</h3>
+      </div>
+      <div class="govuk-grid-column-two-thirds
+       markdown">
+        {{ document.content | safe }}
+      </div>
+    </div>
+
+{% endblock %}
