@@ -36,3 +36,11 @@ $govuk-assets-path: '/govuk/assets/';
   border:0px;
 
 }
+
+strong.govuk-tag {
+  &.live { background-color: #00703c; }
+  &.beta { background-color: #4c2c92; }
+  &.alpha { background-color: #f47738; }
+  &.discovery { background-color: #d53880; }
+  &.prediscovery { background-color: #28a197;}
+}
