@@ -7,6 +7,8 @@ const bodyParser = require('body-parser')
 const dotenv = require('dotenv')
 const express = require('express')
 const nunjucks = require('nunjucks')
+const markdown = require('nunjucks-markdown')
+const marked = require('marked')
 const sessionInCookie = require('client-sessions')
 const sessionInMemory = require('express-session')
 const cookieParser = require('cookie-parser')
@@ -100,6 +102,7 @@ if (env === 'development') {
 nunjucksConfig.express = app
 
 var nunjucksAppEnv = nunjucks.configure(appViews, nunjucksConfig)
+markdown.register(nunjucksAppEnv, marked);
 
 // Add Nunjucks filters
 utils.addNunjucksFilters(nunjucksAppEnv)

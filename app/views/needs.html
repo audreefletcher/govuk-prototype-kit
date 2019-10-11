@@ -1,0 +1,43 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a href="#" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third">
+        <h3 class="govuk-heading-m">Search for needs</h3>
+      </div>
+      <div class="govuk-grid-column-two-thirds">
+
+        {% for need in needs %}
+
+
+          <span class="govuk-caption-m">
+            {% if need.id == true %}
+              <span class="govuk-tag govuk-phase-banner__content__tag">EPIC</span>
+            {% endif %}
+            ID: {{ need.id }}
+          </span>
+          <a href="{{ need.researchLocation }}" class="govuk-heading-m">{{ need.story }}</a>
+          <p>
+            <strong>Service: </strong> {{ need.service }}<br>
+            <strong>Service Pattern: </strong> {{ need.servicePattern }}
+          </p>
+          <hr class="govuk-section-break govuk-!-margin-top-6 govuk-!-margin-bottom-4 govuk-section-break--visible">
+
+        {% endfor %}
+
+      </div>
+    </div>
+
+{% endblock %}
