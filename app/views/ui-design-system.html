@@ -1,0 +1,39 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block main %}
+<div class="masthead">
+  <div class="hero hero--breaded">
+    <div class="hero__content">
+      <div class="hero__body">
+        <h3 class="hero__title govuk-!-margin-top-9">Design your service using DfE UI styles, components and patterns</h1>
+        <p class="hero__description"> Use this design system to give your service users a more consistent user experience across Department for Education services. Learn from the research and experience of other service teams and avoid repeating work that's already been done. </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="govuk-width-container">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third govuk-!-padding-bottom-6">
+      <a href="/styles" class="govuk-heading-m">Styles
+       </a>
+    <p class="width-limit">Make your service look like DfE with guides for applying layout, typography, colour and images</p>
+  </div>
+  <div class="govuk-grid-column-one-third govuk-!-padding-bottom-6">
+      <a href="/components" class="govuk-heading-m">Components
+       </a>
+    <p class="width-limit">Save time with reusable, accessible components for forms, navigation, panels, tables and more.</p>
+  </div>
+  <div class="govuk-grid-column-one-third govuk-!-padding-bottom-6">
+      <a href="/patterns" class="govuk-heading-m">Patterns
+       </a>
+    <p class="width-limit">Help users complete common tasks like entering names and addresses, filling in forms and creating accounts.</p>
+  </div>
+</div>
+</div>
+</div>
+{% endblock %}

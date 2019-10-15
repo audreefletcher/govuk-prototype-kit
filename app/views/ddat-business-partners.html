@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block beforeContent %}
+{{ govukPhaseBanner({
+tag: {
+  text: "alpha"
+},
+classes: "no-border",
+html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+</div>
+<div class="app-navigation govuk-clearfix">
+  <ul class="app-navigation__list govuk-width-container">
+    <li class="app-navigation__list-item app-navigation__list-item--current">
+      <a class="govuk-link govuk-link--no-visited-state app-navigation__link govuk-!-font-weight-bold" href="/get-started/" data-topnav="Get started">GOV.UK Service Toolkit</a>
+    <li class="app-navigation__list-item">
+      <a class="govuk-link govuk-link--no-visited-state app-navigation__link govuk-!-font-weight-bold" href="/get-started/" data-topnav="Get started">DfE guidance and tools</a>
+      <li class="app-navigation__list-item">
+        <a class="govuk-link govuk-link--no-visited-state app-navigation__link govuk-!-font-weight-bold" href="/findandbook" data-topnav="Get started">In-house services</a>
+    <li class="app-navigation__list-item">
+      <a class="govuk-link govuk-link--no-visited-state app-navigation__link govuk-!-font-weight-bold" href="/get-started/" data-topnav="Get started">Assessments</a>
+    <li class="app-navigation__list-item">
+      <a class="govuk-link govuk-link--no-visited-state app-navigation__link govuk-!-font-weight-bold" href="/get-started/" data-topnav="Get started">Training</a>
+
+  </ul>
+</div>
+<div class="govuk-width-container">
+  {% endblock %}
+  {% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <ul class="app-subnav__section">
+        <li class="app-subnav__section-item app-subnav__section-item--current"><a class="app-subnav__link govuk-link govuk-link--no-visited-state" href="/styles/colour/">Introduction</a></li>
+        <li class="app-subnav__section-item"><a class="app-subnav__link govuk-link govuk-link--no-visited-state" href="/styles/colour/">User research in discovery</a></li>
+        <li class="app-subnav__section-item"><a class="app-subnav__link govuk-link govuk-link--no-visited-state" href="/styles/colour/">User research in alpha</a></li>
+        <li class="app-subnav__section-item"><a class="app-subnav__link govuk-link govuk-link--no-visited-state" href="/styles/colour/">User research in beta</a></li>
+        <li class="app-subnav__section-item"><a class="app-subnav__link govuk-link govuk-link--no-visited-state" href="/styles/colour/">User research in live</a></li>
+        <li class="app-subnav__section-item"><a class="app-subnav__link govuk-link govuk-link--no-visited-state" href="/UserResearch">User research library</a></li>
+        <li class="app-subnav__section-item"><a class="app-subnav__link govuk-link govuk-link--no-visited-state" href="/UserResearch">Participant consent management</a></li>
+      </ul>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Services delivered by DfE</h1>
+      <p class="govuk-body-l">Services delivered by the Department for Education and related organisations as an end user would know them.</p>
+      <p class="govuk-body">If you’d like to suggest a service or a change to something listed here please email <a href="mailto:servicelist@digital.education.gov.uk">servicelist@digital.education.gov.uk</a></p>
+
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Name</th>
+            <th scope="col" class="govuk-table__header">Phase</th>
+            <th scope="col" class="govuk-table__header">Service Owner</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+
+          {% for service in servicelist %}
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">{{ service.name }}</th>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-phase-banner__content__tag {{ service.phase | lower }}">{{ service.phase }}</strong>
+    </td>
+            <td class="govuk-table__cell">{{ service.owner }}</td>
+          </tr>
+              {% endfor %}
+        </tbody>
+      </table>
+
+
+    </div>
+   </div> {% endblock %}

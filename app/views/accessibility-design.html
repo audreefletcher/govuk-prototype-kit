@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block beforeContent %}
+{{ govukPhaseBanner({
+tag: {
+  text: "alpha"
+},
+classes: "no-border",
+html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+</div>
+<div class="app-navigation govuk-clearfix">
+  <ul class="app-navigation__list govuk-width-container">
+    <li class="app-navigation__list-item">
+      <a class="govuk-link govuk-link--no-visited-state app-navigation__link govuk-!-font-weight-bold" href="/get-started/" data-topnav="Get started">GOV.UK Service Toolkit</a>
+    <li class="app-navigation__list-item app-navigation__list-item--current">
+      <a class="govuk-link govuk-link--no-visited-state app-navigation__link govuk-!-font-weight-bold" href="/get-started/" data-topnav="Get started">DfE guidance and tools</a>
+    <li class="app-navigation__list-item">
+      <a class="govuk-link govuk-link--no-visited-state app-navigation__link govuk-!-font-weight-bold" href="/get-started/" data-topnav="Get started">Assessments</a>
+    <li class="app-navigation__list-item">
+      <a class="govuk-link govuk-link--no-visited-state app-navigation__link govuk-!-font-weight-bold" href="/get-started/" data-topnav="Get started">In-house services</a>
+    <li class="app-navigation__list-item">
+      <a class="govuk-link govuk-link--no-visited-state app-navigation__link govuk-!-font-weight-bold" href="/get-started/" data-topnav="Get started">Training</a>
+
+  </ul>
+</div>
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/">Location</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/examples">Location</a>
+      </li>
+    </ol>
+  </div>
+  {% endblock %}
+  {% block content %}
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+          <ul class="app-subnav__section">
+            <li class="app-subnav__section-item"><a class="app-subnav__link govuk-link govuk-link--no-visited-state" href="/intro-to-design">Introduction</a></li>
+            <li class="app-subnav__section-item"><a class="app-subnav__link govuk-link govuk-link--no-visited-state" href="/principles">Principles</a></li>
+            <li class="app-subnav__section-item app-subnav__section-item--current"><a class="app-subnav__link govuk-link govuk-link--no-visited-state" href="/accessibility-design">Accessibility</a></li>
+            <li class="app-subnav__section-item"><a class="app-subnav__link govuk-link govuk-link--no-visited-state" href="/content-style-guide">Content style guide</a></li>
+            <li class="app-subnav__section-item"><a class="app-subnav__link govuk-link govuk-link--no-visited-state" href="/UI-design-system">UI styles, components and patterns</a></li>
+            <li class="app-subnav__section-item"><a class="app-subnav__link govuk-link govuk-link--no-visited-state" href="/front-end-library">Front-end library</a></li>
+          </ul>
+        </div>
+        <div class="govuk-grid-column-two-thirds">
+          <h1 class="govuk-heading-xl">Designing for accessibility</h1>
+          <div class="govuk-inset-text">
+    This is "for now" text. The page will be designed by the Heads of Service, Content and Interaction Design in collaboration with the DfE design community.</div>
+
+    </div>
+   </div> {% endblock %}
