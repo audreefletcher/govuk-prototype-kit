@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block beforeContent %}
+{{ govukPhaseBanner({
+tag: {
+  text: "alpha"
+},
+classes: "no-border",
+html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+</div>
+<div class="app-navigation govuk-clearfix">
+  <ul class="app-navigation__list govuk-width-container">
+    <li class="app-navigation__list-item app-navigation__list-item--current">
+      <a class="govuk-link govuk-link--no-visited-state app-navigation__link govuk-!-font-weight-bold" href="/get-started/" data-topnav="Get started">Research library</a>
+    <li class="app-navigation__list-item">
+      <a class="govuk-link govuk-link--no-visited-state app-navigation__link govuk-!-font-weight-bold" href="/get-started/" data-topnav="Get started">User needs</a>
+  </ul>
+</div>
+<div class="govuk-width-container">
+  {% endblock %}
+  {% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <ul class="app-subnav__section">
+        <li class="app-subnav__section-item app-subnav__section-item--current"><a class="app-subnav__link govuk-link govuk-link--no-visited-state" href="/styles/colour/">GOV.UK Service Toolkit</a></li>
+        <li class="app-subnav__section-item"><a class="app-subnav__link govuk-link govuk-link--no-visited-state" href="/styles/colour/">DfE guidance and tools</a></li>
+        <li class="app-subnav__section-item"><a class="app-subnav__link govuk-link govuk-link--no-visited-state" href="/styles/colour/">Assessments</a></li>
+        <li class="app-subnav__section-item"><a class="app-subnav__link govuk-link govuk-link--no-visited-state" href="/styles/colour/">In-house services</a></li>
+        <li class="app-subnav__section-item"><a class="app-subnav__link govuk-link govuk-link--no-visited-state" href="/styles/colour/">Training</a></li>
+      </ul>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Contribute</h1>
+      <h3 class="govuk-heading-m">Help to grow and improve the digital service manual</h3>
+      <p class="govuk-body">We believe a design system to be a community-owned asset. This means the community - led by our heads of profession - should be growing and improving it.
+
+      <h3 class="govuk-heading-m govuk-!-padding-top-6">How to contribute</h3>
+      <p class="govuk-body">Find out how to:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="#">propose a new thing that's not in the backlog</a></li>
+        <li><a href="#">work on something in the backlog</a></li>
+      </ul>
+
+      <h3 class="govuk-heading-m govuk-!-padding-top-6">Community backlog</h3>
+      <p class="govuk-body">The service manual is for everyone who makes digital products and services in the DfE. Anyone can propose, contribute and work on new things.</p>
+      <a href="/components" class="govuk-heading-s">Go to the community backlog. </a>
+
+      <h3 class="govuk-heading-m govuk-!-padding-top-6">Contribution criteria</h3>
+      <p class="govuk-body">To make sure everything in the service manual is of high quality, contributions need to meet the following <a href="#">contribution criteria</a></p>
+
+
+
+    </div>
+
+  </div>
+
+
+
+
+  {% endblock %}

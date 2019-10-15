@@ -12,14 +12,17 @@ classes: "no-border",
 html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
 </div>
-<div class="app-navigation govuk-clearfix">
-  <ul class="app-navigation__list govuk-width-container">
-    <li class="app-navigation__list-item app-navigation__list-item--current">
-      <a class="govuk-link govuk-link--no-visited-state app-navigation__link govuk-!-font-weight-bold" href="/get-started/" data-topnav="Get started">Research library</a>
-    <li class="app-navigation__list-item">
-      <a class="govuk-link govuk-link--no-visited-state app-navigation__link govuk-!-font-weight-bold" href="/get-started/" data-topnav="Get started">User needs</a>
-  </ul>
-</div>
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="index">DfE guidance and tools</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/intro-to-design">Design</a>
+      </li>
+    </ol>
+  </div>
 <div class="govuk-width-container">
   {% endblock %}
   {% block content %}
