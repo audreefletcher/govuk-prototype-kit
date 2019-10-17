@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block beforeContent %}
+{{ govukPhaseBanner({
+tag: {
+  text: "alpha"
+},
+classes: "no-border",
+html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+</div>
+<div class="app-navigation govuk-clearfix">
+  <ul class="app-navigation__list govuk-width-container">
+    <li class="app-navigation__list-item">
+      <a class="govuk-link govuk-link--no-visited-state app-navigation__link govuk-!-font-weight-bold" href="https://www.gov.uk/service-manual" data-topnav="Get started">GOV.UK Service Toolkit</a>
+    <li class="app-navigation__list-item app-navigation__list-item--current">
+      <a class="govuk-link govuk-link--no-visited-state app-navigation__link govuk-!-font-weight-bold" href="/guidance-and-tools" data-topnav="Get started">DfE guidance and tools</a>
+    <li class="app-navigation__list-item">
+      <a class="govuk-link govuk-link--no-visited-state app-navigation__link govuk-!-font-weight-bold" href="/assessments" data-topnav="Get started">Assessments</a>
+    <li class="app-navigation__list-item">
+      <a class="govuk-link govuk-link--no-visited-state app-navigation__link govuk-!-font-weight-bold" href="/in-house-services" data-topnav="Get started">In-house services</a>
+    <li class="app-navigation__list-item">
+      <a class="govuk-link govuk-link--no-visited-state app-navigation__link govuk-!-font-weight-bold" href="/training" data-topnav="Get started">Training</a>
+
+  </ul>
+</div>
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="guidance-and-tools">DfE Guidance and tools</a>
+      </li>
+    </ol>
+  </div>
+  {% endblock %}
+  {% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <ul class="app-subnav__section">
+        <li class="app-subnav__section-item"><a class="app-subnav__link govuk-link govuk-link--no-visited-state" href="/intro-to-engineering-and-architecture">Introduction to Engineering and Architecture</a></li>
+        <li class="app-subnav__section-item"><a class="app-subnav__link govuk-link govuk-link--no-visited-state" href="/dfe-architecture">DfE Digital Architecture</a></li>
+        <li class="app-subnav__section-item app-subnav__section-item--current"><a class="app-subnav__link govuk-link govuk-link--no-visited-state" href="/dfe-digital-technical-guidance">Digital Technical Guidance</a></li>
+      </ul>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">DfE digital technical guidance</h1>
+      <div class="govuk-inset-text">
+This is "for now" text. The page will be designed by the [the right people] in collaboration with the engineering, architecture and service owner communities.</div>
+
+<p class="govuk-body">The technical standards and guidance that we expect teams working within the Department for Education to follow when building digital services.</p>
+<p class="govuk-body">It complements the <a href="#">GDS Service Manual</a> and its <a href="#">technology section</a>, which covers service design more broadly.</p>
+<p class="govuk-body">It is inspired by the <a href="#">GDS Way</a> and the <a ref="#">Ministry of Justice Technical Guidance><a/>.
+
+<h3 class="govuk-heading-m">Principles</h3>
+<p class="govuk-body">
+  <ul class="govuk-list govuk-list--bullet">
+    <li><a href="#">Coding principles</a></li>
+    <li><a href="#">Architecture principles</a></li>
+    <li><a href="#">Frontend development principles</a></li>
+  </ul>
+
+  <h3 class="govuk-heading-m">Standards:Building software</h3>
+  <p class="govuk-body">
+    <ul class="govuk-list govuk-list--bullet">
+      <li><a href="#">Licensing software or code</a></li>
+      <li><a href="#">Naming things</a></li>
+      <li><a href="#">Storing source code</a></li>
+    </ul>
+    <h3 class="govuk-heading-m">Standards: General standards</h3>
+    <p class="govuk-body">
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="#">Using 3rd-party open source products</a></li>
+      </ul>
+      <h3 class="govuk-heading-m">DfE Digital Technology Stack</h3>
+      <p class="govuk-body">
+        <ul class="govuk-list govuk-list--bullet">
+          <li><a href="#">Application stacks</a></li>
+          <li><a href="#">Hosting stack</a></li>
+          <li><a href="#">Logging, monitoring and alerting</a></li>
+        </ul>
+        <h3 class="govuk-heading-m">Get in touch</h3>
+        <p class="govuk-body"> You can <a href="/contribute">contribute</a> code via Github.</p>
+        <p class="govuk-body"> And you can contact us on the DfE service manual Slack workspace or email the standards team <a href="mailto:service-manual@digital.education.gov.uk">service-manual@digital.education.gov.uk</a></p>
+
+    </div>
+   </div> {% endblock %}
